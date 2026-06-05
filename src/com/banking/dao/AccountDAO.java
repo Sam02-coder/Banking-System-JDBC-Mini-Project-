@@ -1,5 +1,15 @@
 package com.banking.dao;
 
-public interface AccountDAO {
+import java.util.List;
 
+import com.banking.model.Account;
+
+public interface AccountDAO {
+	void createAccount(Account acc);
+
+	Account getAccount(int accNo);
+
+	void updateAccount(int accNo, double balance);
+
+	List<Account> getAllAccounts();
 }

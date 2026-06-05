@@ -1,5 +1,17 @@
 package com.banking.util;
 
-public class DBUtil {
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
+public class DBUtil {
+	private static final String URL="jdbc:mysql://loacalhost:3306/bankdb";
+	private static final String USER="root";
+	private static final String PASSWORD="root";
+	
+	public static Connection getConnection() throws ClassNotFoundException, SQLException {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		return DriverManager.getConnection(URL,USER,PASSWORD);
+	}
 }
