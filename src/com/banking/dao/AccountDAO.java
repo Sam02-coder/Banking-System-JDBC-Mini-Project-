@@ -9,7 +9,8 @@ public interface AccountDAO {
 
 	Account getAccount(int accNo);
 
-	void updateAccount(int accNo, double balance);
+	void updateBalance(int accNo, double balance);
 
 	List<Account> getAllAccounts();
+
 }

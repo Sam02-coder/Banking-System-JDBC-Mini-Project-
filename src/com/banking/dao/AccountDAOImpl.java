@@ -63,7 +63,7 @@ public class AccountDAOImpl implements AccountDAO {
 	}
 
 	@Override
-	public void updateAccount(int accNo, double balance) {
+	public void updateBalance(int accNo, double balance) {
 		try {
 			Connection con = DBUtil.getConnection();
 
